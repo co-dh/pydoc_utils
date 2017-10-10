@@ -1,5 +1,4 @@
 import inspect
-from typing import List
 from pydoc import ModuleScanner, visiblename, locate, ErrorDuringImport, allmethods
 
 def getmodules():
@@ -16,7 +15,7 @@ def getmodules():
     return modules
 
 
-def getclasses(module: str):
+def getclasses(module):
     try:
         module = locate(module)
     except ErrorDuringImport:
@@ -32,7 +31,7 @@ def getclasses(module: str):
     return classes
 
 
-def getfuncs(module: str):
+def getfuncs(module):
     try:
         module = locate(module)
     except ErrorDuringImport:
