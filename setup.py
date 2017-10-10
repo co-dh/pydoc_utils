@@ -1,4 +1,5 @@
-from distutils.core import setup
+from setuptools import setup
+
 setup(name='pydoc_utils',
       version='1.0.0',
       description='A pydoc utility modules. It prints all modules, classes, methods and functions in stdout.',
