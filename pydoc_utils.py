@@ -61,9 +61,12 @@ def getall():
         if m.startswith('_'):
             continue
         clss = getclasses(m)
-        
+
         for name, cls in clss:
-            all += [ _fullname(m, name) + '.' +  x for x in allmethods(cls).keys() if not x.startswith('_')]
+            try:
+                all += [ _fullname(m, name) + '.' +  x for x in allmethods(cls).keys() if not x.startswith('_')]
+            except AttributeError:
+                pass
         all += [_fullname(m, x[0]) for x in clss ]
         all += [_fullname(m, x[0]) for x in getfuncs(m)]
 
@@ -74,4 +77,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    

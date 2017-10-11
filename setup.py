@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pydoc_utils',
-      version='1.0.0',
+      version='1.0.1',
       description='A pydoc utility modules. It prints all modules, classes, methods and functions in stdout.',
       author='Hao Deng',
       url='https://github.com/co-dh/pydoc_utils',
