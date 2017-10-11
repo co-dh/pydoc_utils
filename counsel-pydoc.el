@@ -38,6 +38,8 @@
     (call-process "python" nil "*pydoc*" t "-m" "pydoc" x)
     ))
 
+(setq counsel-pydoc-names nil)
+
 ;;;###autoload
 (defun counsel-pydoc (arg)
   "Run pydoc with counsel.
