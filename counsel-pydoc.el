@@ -5,7 +5,7 @@
 ;; Author: Hao Deng(denghao8888@gmail.com)
 ;; URL: https://github.com/co-dh/pydoc_utils
 ;; Keywords: completion, matching
-;; Package-Requires: ((emacs "24.3") (swiper "0.9.0"))
+;; Package-Requires: ((emacs "24.3") (ivy "0.9.1"))
 ;; Version: 1.0.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -37,7 +37,7 @@
 ;;    2. M-x counsel-pydoc
 ;;; Code:
 
-(require 'swiper)
+(require 'ivy)
 
 (defun counsel-pydoc-run(x)
   (with-output-to-temp-buffer "*pydoc*"
